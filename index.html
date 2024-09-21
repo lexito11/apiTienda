@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExotiQ Market</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+</head>
+<body>
+    <header>
+        <h1>ExotiQ Market</h1>
+        <div class="filters">
+            <label for="price-sort">Ordenar por precio:</label>
+            <select id="price-sort" onchange="handlePriceSort(this.value)">
+                <option value="">Seleccionar</option>
+                <option value="asc">Ascendente</option>
+                <option value="desc">Descendente</option>
+            </select>
+
+            <label for="category-filter">Filtro por categoría:</label>
+            <select id="category-filter" onchange="handleCategoryFilter(this.value)">
+                <option value="">Todo</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <section id="product-list" class="product-list">
+        </section>
+
+        <aside class="cart-section">
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i> 
+            </div>
+            <h2>compras</h2>
+            <div id="cart" class="cart">
+            </div>
+            <div id="cart-summary" class="cart-summary">
+                Total: $0.0
+            </div>
+        </aside>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
